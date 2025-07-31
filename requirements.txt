@@ -1,0 +1,6 @@
+pandas
+nltk
+flask
+flask-socketio
+python-eventlet
+requests

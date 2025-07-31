@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Agent 🤖</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Analysis Agent 🤖</h1>
+        <div id="chat-history">
+             <div class="chat-message assistant-message">
+                <div class="assistant-content" id="initial-greeting">
+                    <p>أهلاً بك! أنا وكيل تحليل البيانات. كيف يمكنني مساعدتك اليوم؟</p>
+                </div>
+            </div>
+        </div>
+        <div class="query-box">
+            <div id="error-display"></div>
+            <form id="query-form">
+                <textarea id="query-input" placeholder="الرجاء إدخال استفسارك هنا..." required rows="1"></textarea>
+                <button type="submit" id="submit-button" disabled>Connecting...</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
